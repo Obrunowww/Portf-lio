@@ -186,3 +186,32 @@ img{
 
 
 `
+
+export const RedesSociaisNav = styled.nav`
+width: 100%;
+height: 10%;
+display: flex;
+justify-content: center;
+
+align-items: center;
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    color: white;
+
+    li{
+        cursor: pointer;
+        font-size: 30px;
+        &:hover{
+            &:first-child{
+                color: black;
+            }
+            &:last-child{
+                color: #0e76a8;
+            }
+        }
+    }
+}
+`

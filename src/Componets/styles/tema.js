@@ -22,7 +22,7 @@ export const temas =  {
         background: "#242424",
         background2: "#00000055",
         background3: "#ffffff86",
-        corPrincipal: "#5b2588bc",
+        corPrincipal: "#8333c5bb",
         corSecundaria: "#760bce53",
         corTerciariaEscura: "#170129bb",
         corTerciariaClara: "#adabab",

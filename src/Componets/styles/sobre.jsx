@@ -173,6 +173,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 animation: ${aparecer} ease 2s;
+
 div{
     animation: ${aparecer} ease 2s;
 }

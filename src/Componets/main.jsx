@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
-import { Principal, Figure, SessãoPrincipal, TextoAnimado, Apresentação } from "./styles/main"
+import { Principal, Figure, SessãoPrincipal, TextoAnimado, Apresentação, RedesSociaisNav } from "./styles/main"
 import { useEffect } from "react"
+import { VscGithub } from "react-icons/vsc";
+import { FaLinkedin } from "react-icons/fa";
 
 
 
@@ -23,7 +25,12 @@ function Main({setAtivo}) {
                         </Link>
                     </button>
 
-                    <section><h2>Redes Sociais</h2></section>
+                    <RedesSociaisNav>
+                        <ul>
+                            <li onClick={() =>  window.open(`https://github.com/Obrunowww`, '_blank')}><VscGithub/></li>
+                            <li onClick={() =>  window.open(`https://www.linkedin.com/in/bruno-cesar-b7842a292/`, '_blank')}><FaLinkedin /></li>
+                        </ul>
+                    </RedesSociaisNav>
                 </Apresentação>
                 <Figure>
                     <img src="./imagens/fotoParaPortifolio.jpg" alt="" />
