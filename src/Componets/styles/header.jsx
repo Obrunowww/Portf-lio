@@ -66,3 +66,41 @@ a:hover{
     transition: all ease 2s;
 }
 `
+
+// Botão de modoClaro/escuro
+
+export const BotãoContainer= styled.div`
+width: 4%;
+height: 52%;
+border: solid 1px;
+display: flex;
+overflow: hidden;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+
+
+
+button{
+    background-color: ${props => props.modoEscuro === "true" ? "#9ed5f7" : "#0000008d"};
+    border: none;
+    width: 100%;
+    height: 100%;
+    color:  ${props => props.modoEscuro === "true" ? "yellow" : "#8484fa"};
+    font-size: 20px;
+    display: flex;
+  
+    div{
+        transition: all ease 1.5s;
+        transform: ${props => props.modoEscuro === "true" ? "translateX(0%)" : "translateX(-100%)"} ;
+        flex: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+`

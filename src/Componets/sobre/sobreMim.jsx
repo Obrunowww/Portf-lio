@@ -19,7 +19,7 @@ function SobreMim({ alterarInfo }) {
             <div className="botões">
             <button onClick={() => { alterarInfo(100, 102) }}>Ver minhas Habilidades</button>
             <button>
-                <a href="" download={true}>Meu currículo</a>
+                <a href="https://drive.google.com/file/d/1BM1NNdkgfVBJIvU58n0zojpCuQnlhT7y/view?usp=drive_link" download={true} target="_blank">Meu currículo</a>
             </button>
 
             </div>

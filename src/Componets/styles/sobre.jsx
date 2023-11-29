@@ -26,7 +26,7 @@ align-items: center;
 justify-content: space-around;
 box-shadow: 1px 1px 10px black;
 position: relative;
-
+border-radius: 10px;
 &::before{
     content: "";
     position: absolute;
@@ -96,23 +96,29 @@ flex-direction: column;
 gap: 7%;
 div{
     flex: none;
-    width: 100% ;
+    width: 32% ;
     height: 30px;
+    display: flex;
+    justify-content: space-around;
     button{
-    width: 30%;
+    width: 45%;
     height: 100%;
     align-self: center;
+    
     border: solid 1px;
     color: ${props => props.theme.corDeDestaqueClaro};
     transition: all ease 1s;
     filter: drop-shadow(1px 1px 1px black);
     background-color: ${props => props.theme.background2};
-    a{
+        a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
         color: ${props => props.theme.corDeDestaqueClaro};
-    }
-    &:hover{
+        }
+        &:hover{
         background-color: ${props => props.theme.background3};
         filter: drop-shadow(2px 2px 20px ${(props) => props.theme.corSecundaria})
     }
@@ -152,7 +158,7 @@ filter: grayscale(100%);
     text-shadow: 1px 1px black;
 }
 `
-export const  IconesContainer = styled.div`
+export const IconesContainer = styled.div`
 width: 30%;
 height: 60%;
 gap: 2%;
@@ -160,7 +166,7 @@ display: flex;
 flex-wrap: wrap;
 `
 
-export const  InfoDaAbilidade= styled.div`
+export const InfoDaAbilidade = styled.div`
 width: 45%;
 height: 100%;
 display: flex;
@@ -174,7 +180,7 @@ div{
 
 //Interesses
 
-export const InteressesContainer= styled.div`
+export const InteressesContainer = styled.div`
 width: 100%;
 height: 100%;
 display: flex;

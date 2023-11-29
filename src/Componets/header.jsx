@@ -1,21 +1,21 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import {Navegação, Lista, HeaderContainer} from "./styles/header"
+import { Navegação, Lista, HeaderContainer, BotãoContainer } from "./styles/header"
+import { IoMdSunny } from "react-icons/io";
+import { FaMoon } from "react-icons/fa";
+
+function Header({ escuro, setEscuro, ativo, setAtivo }) {
 
 
 
-function Header({escuro, setEscuro, ativo, setAtivo}) {
-    
-    
-
-    const ativar = (ativador) =>{
-        if(ativador != ativo){
+    const ativar = (ativador) => {
+        if (ativador != ativo) {
             setAtivo(ativador)
         }
 
     }
 
-   
+
     return (
         <HeaderContainer>
             <div>
@@ -23,39 +23,51 @@ function Header({escuro, setEscuro, ativo, setAtivo}) {
             </div>
             <Navegação>
                 <ul>
-                    <Lista onClick={() =>{
+                    <Lista onClick={() => {
                         ativar("Inicio")
-                    }} ativo ={ativo == 'Inicio'? "true": "false"}>
+                    }} ativo={ativo == 'Inicio' ? "true" : "false"}>
                         <Link to="/">
                             Inicio
                         </Link>
                     </Lista>
-                    <Lista onClick={() =>{
+                    <Lista onClick={() => {
                         ativar("Sobre")
-                    }}  ativo ={ativo == 'Sobre'? "true": "false"}>
+                    }} ativo={ativo == 'Sobre' ? "true" : "false"}>
                         <Link to="/sobre">
                             Sobre
                         </Link>
                     </Lista>
-                    <Lista onClick={() =>{
+                    <Lista onClick={() => {
                         ativar("Projetos")
-                    }} 
-                    ativo ={ativo == 'Projetos'? "true": "false"}>
+                    }}
+                        ativo={ativo == 'Projetos' ? "true" : "false"}>
                         <Link to="/projetos">
                             Projetos
                         </Link>
                     </Lista>
                 </ul>
 
-                
+
 
             </Navegação>
 
-            <div>
-           <button onClick={()=> setEscuro(!escuro)}> alterar</button>
+            <BotãoContainer modoEscuro={escuro ? "true" : "false"}>
 
-            </div>
-               
+                <button onClick={() => setEscuro(!escuro)}>
+
+                    <div>
+
+                        <IoMdSunny />
+                    </div>
+                    <div>
+                        <FaMoon />
+
+                    </div>
+
+                </button>
+
+            </BotãoContainer>
+
         </HeaderContainer>
     )
 }
