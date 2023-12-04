@@ -82,6 +82,12 @@ overflow: hidden;
    
 }
 
+@media (min-width: 850px) and (max-width: 1000px) {
+    font-size: 25px;
+
+}
+
+
 `
 
 export const ConteudoInfo = styled.div`
@@ -135,6 +141,14 @@ div{
     div{
         width: 60%;
         height: 40px;
+        padding: 1%;
+    }
+}
+@media (min-width: 850px) and (max-width: 1000px) {
+  
+    div{
+        width: 60%;
+        height: 50px;
         padding: 1%;
     }
 }
