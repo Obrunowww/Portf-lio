@@ -1,4 +1,5 @@
-
+// Criei o tema separado para nn ficar me perdendo sempre qnd eu for alterar as cores
+// Modo claro ainda ta sendo adaptado nn gostei muito das cores
 export const temas =  {
     claro: {
         corDoTexto: '#000000',

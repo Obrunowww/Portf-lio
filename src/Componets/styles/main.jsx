@@ -47,6 +47,24 @@ const digitando = keyframes`
   }
 `;
 
+const aparecerEsquerda = keyframes`
+from{
+    transform: translateX(-100%);
+
+}to{
+    transform: translateX(0) ;
+}
+`
+const aparecerDireita = keyframes`
+from{
+    transform: translateX(100%);
+
+}to{
+    transform: translateX(0) ;
+}
+`
+
+
 
 export const Principal = styled.main`
 animation: ${aparecer} ease 2s;
@@ -58,16 +76,21 @@ align-items: center;
 justify-content: center;
 ::-webkit-scrollbar{
     width: 5px;
+
+    
     
  }
  ::-webkit-scrollbar-track{
     background-color:${(props) => props.theme.corTerciariaClara};
     border-radius: 10px;
+
+
    
  }
  ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: ${(props) => props.theme.corPrincipal};
+    
   }
 
 `
@@ -77,6 +100,12 @@ height: 90%;
 display: flex;
 justify-content: space-between;
 position: relative;
+@media (max-width: 450px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    
+}
 
 `
 export const Apresentação = styled.div`
@@ -87,6 +116,8 @@ font-size: 25px;
 align-items: center;
 justify-content: center;
 gap: 5%;
+transform: translateX(0);
+animation: ${aparecerEsquerda} ease 1s, ${aparecer} ease 3s;
 p{
     width: 70%;
 }
@@ -113,6 +144,19 @@ button{
             color: ${(props) => props.theme.corPrincipal};
         }
     }
+}
+@media (max-width: 450px) {
+  width: 100%;
+  height: 50%;
+  h2{
+    font-size: 25px;
+  }
+  button{
+    width: 40%;
+    height: 20%;
+    font-size: 18px;
+    padding: 1%;
+  }
 }
 
 `
@@ -150,6 +194,7 @@ align-items: center;
 justify-content: center;
 position: relative;
 filter: grayscale(25%);
+animation: ${aparecerDireita} ease 1s, ${aparecer} ease 3s;
 
 &:hover{
     filter: grayscale(0%);
@@ -183,7 +228,10 @@ img{
         animation: ${movimentar} ease 2.5s infinite;
     }
 }
-
+@media (max-width: 450px) {
+  width: 50%;
+  height: 50%;
+}
 
 `
 
@@ -208,8 +256,11 @@ ul{
             &:first-child{
                 color: black;
             }
-            &:last-child{
+            &:nth-child(2){
                 color: #0e76a8;
+            }
+            &:last-child{
+                color: #25D366;
             }
         }
     }

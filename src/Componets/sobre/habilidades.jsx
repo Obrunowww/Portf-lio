@@ -29,7 +29,7 @@ function Abilidades() {
         nome: "JavaScript",
         logo: <IoLogoJavascript />,
         corHover: { cor: "white", bg: "#F0DB4F" },
-        info: "Tenho conhecimento em JavaScript para manipulação do DOM, incluindo loops, manipulação de arrays e utilização de APIs. Desenvolvi projetos, como a Pokédex, que está disponível em Projetos. No momento, estou trabalhando em um projeto que envolve a utilização da API TMDB para um site de filmes."
+        info: "Tenho conhecimento em moderado de JavaScript para manipulação do DOM, incluindo loops, manipulação de arrays e utilização de APIs. Desenvolvi projetos, como o do One Piece, que está disponível em Projetos. No momento, estou trabalhando em um projeto que envolve a utilização da API TMDB para um site de filmes."
     },
     {
         nome: "React",

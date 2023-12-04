@@ -16,6 +16,12 @@ h2, h3{
     color: ${props => props.theme.corDeDestaqueClaro};
     text-shadow: 1px 1px 1px black;
 }
+@media (max-width: 450px) {
+    width: 95%;
+    height: 95%;
+    font-size: 20px;
+    overflow: auto;
+}
 `
 
 export const InfosSeletor = styled.div`
@@ -125,7 +131,13 @@ div{
 }
 }
 
-
+@media (max-width: 450px) {
+    div{
+        width: 60%;
+        height: 40px;
+        padding: 1%;
+    }
+}
 
 `
 
@@ -133,10 +145,16 @@ div{
 
 export const AbilidadesContainer = styled.div`
 width: 100%;
-height: 100;
+height: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+
+
+@media (max-width: 450px) {
+   flex-direction: column-reverse;
+   height: 100%;
+}
 `
 
 
@@ -157,6 +175,12 @@ filter: grayscale(100%);
     background-color: ${props => props.bg};
     text-shadow: 1px 1px black;
 }
+@media (max-width: 450px) {
+   width: 35%;
+   height: 35%;
+   font-size: 30px;
+}
+
 `
 export const IconesContainer = styled.div`
 width: 30%;
@@ -164,6 +188,11 @@ height: 60%;
 gap: 2%;
 display: flex;
 flex-wrap: wrap;
+@media (max-width: 450px) {
+   width: 90%;
+   height: 40%;
+   justify-content: center;
+}
 `
 
 export const InfoDaAbilidade = styled.div`
@@ -176,6 +205,9 @@ animation: ${aparecer} ease 2s;
 
 div{
     animation: ${aparecer} ease 2s;
+}
+@media (max-width: 450px) {
+  width: 100%;
 }
 `
 
@@ -207,12 +239,20 @@ p{
     bottom: 20%;
     left: 50%;
     transform: translate(-50%, 0%);
+    animation: ${aparecer} ease 3s;
+}
+@media (max-width: 450px) {
+    .info{
+        width: 100%;
+    }
+    
 }
 
 `
 
 export const ListaPersonalizada = styled.li`
 overflow: hidden;
+flex: none;
 height: ${props => props.aberto === "true" ? "35%" : "10%"};
 position: relative;
 transition: height ease 1.5s;
@@ -239,5 +279,8 @@ h2{
 p{
     padding: 0% 1%;
 }
-
+@media (max-width: 450px) {
+    height: ${props => props.aberto === "true" ? "50%" : "10%"};
+   
+}
 `

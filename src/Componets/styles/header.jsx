@@ -1,5 +1,22 @@
-import styled, {keyframes} from "styled-components"
+import styled, {keyframes, css} from "styled-components"
+import { aparecer } from "./main"
 
+const animaçãoMenuAbrir = keyframes`
+from{
+    transform: translate(100%, -10%);
+}to{
+    transform: translate(0, 0);
+}
+
+`
+const animaçãoMenuFechar = keyframes`
+from{
+    transform: translate(0, 0);
+}to{
+    transform: translate(100%, -10%);
+}
+
+`
 
 export const HeaderContainer = styled.header`
 width: 100%;
@@ -22,6 +39,10 @@ ul{
     justify-content: space-between;
     align-items: center;
     color: #3702f7ab;
+}
+
+@media (max-width: 450px) {
+   display: none;
 }
 
 `
@@ -72,6 +93,101 @@ a:hover{
 export const BotãoContainer= styled.div`
 width: 4%;
 height: 52%;
+
+display: flex;
+overflow: hidden;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+
+
+
+button{
+    background-color: ${props => props.modoEscuro === "true" ? "#9ed5f7" : "#0000008d"};
+    border: none;
+    width: 100%;
+    height: 100%;
+    color:  ${props => props.modoEscuro === "true" ? "yellow" : "#8484fa"};
+    font-size: 20px;
+    display: flex;
+  
+    div{
+        transition: all ease 1.5s;
+        transform: ${props => props.modoEscuro === "true" ? "translateX(0%)" : "translateX(-100%)"} ;
+        flex: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
+
+@media (max-width: 450px) {
+   display: none;
+}
+
+`
+
+export const NavegaçãoMobile = styled.nav`
+display: none;
+
+button{
+    width: 15%;
+    font-size: 20px;
+    border: none;
+    height: 50%;
+    background-color: transparent;
+}
+
+@media (max-width: 450px) {
+    .menu{
+    width: 15%;
+    font-size: 25px;
+    border: none;
+    height: 50%;
+    background-color: transparent;
+    color:${(props) => props.theme.corPrincipal}
+   
+}
+   display: flex;
+   width: 50%;
+   justify-content: flex-end;
+   
+}
+
+
+`
+export const MenuMobile = styled.div`
+position: absolute;
+width: 100vw;
+height: 100vh;
+top: 0;
+left: 0;
+background-color: ${(props) => props.theme.background};
+animation: ${(props) => props.animaçãoMenu === "true" ? css`${animaçãoMenuAbrir} ease 1s` : css`${animaçãoMenuFechar} ease 1s`};
+z-index: 3;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 2%;
+ul{
+    display: flex;
+    flex-direction: column;
+    height: 15%;
+    justify-content: space-between;
+}
+.voltar{
+    &:hover{
+        text-decoration: underline;
+    }
+}
+`
+
+export const BotãoContainerMobile = styled.div`
+width: 10%;
+height: 5%;
 border: solid 1px;
 display: flex;
 overflow: hidden;
@@ -101,6 +217,4 @@ button{
         justify-content: center;
     }
 }
-
-
 `

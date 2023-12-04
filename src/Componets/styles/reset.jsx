@@ -31,7 +31,10 @@ a{
   color: ${(props) => props.theme.corDoTexto};
   transition: all ease 1s;
 }
-
+h1{
+  color: ${(props) => props.theme.corPrincipal};
+  text-shadow: 1px 1px 1px  ${(props) => props.theme.corTerciariaClara};
+}
 button{
   cursor: pointer;
   

@@ -13,19 +13,32 @@ justify-content: space-between;
 flex-wrap: wrap;
 overflow: hidden;
 transition: all ease 2s;
+position: relative;
 
  ::-webkit-scrollbar{
     width: 5px;
+    
+ 
  }
  ::-webkit-scrollbar-track{
     background-color: ${(props) => props.theme.corTerciariaEscura};
+   
  }
  ::-webkit-scrollbar-thumb {
     background: ${(props) => props.theme.corTerciariaClara};
     border-radius: 10%;
+   
   }
  &:hover{
-    overflow: auto;
+   overflow: auto;
+   
+ }
+ @media (max-width: 450px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    gap: 5%;
  }
 `
 export const BotãoDasLinguagens = styled.button`
@@ -66,6 +79,12 @@ figure{
         height: 100%;
         color: #fafafa65;
     }
+}
+@media (max-width: 450px) {
+    width: 100%;
+    height: 62%;
+    flex: none;
+    font-size: 20px;
 }
 
 `

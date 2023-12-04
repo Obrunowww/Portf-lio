@@ -12,6 +12,7 @@ function Projetos({setAtivo}){
         window.open(projeto, '_blank')
     }
 
+    // Fiz isso em todos os componentes pq qd att a pag ele voltava para o inicio na header mas ficava na parte do componente q foi att
     useEffect( () =>{
         setAtivo("Projetos")
     }, [])

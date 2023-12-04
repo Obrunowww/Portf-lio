@@ -1,4 +1,4 @@
-
+// Criei essa arrey Para facilitar na hora de editar as informações e os projetos 
 const projetos = [
     {
         nome: 'Relógio',
