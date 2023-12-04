@@ -41,7 +41,7 @@ ul{
     color: #3702f7ab;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 890px) {
    display: none;
 }
 
@@ -124,7 +124,7 @@ button{
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 890px) {
    display: none;
 }
 
@@ -141,7 +141,7 @@ button{
     background-color: transparent;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 890px) {
     .menu{
     width: 15%;
     font-size: 25px;

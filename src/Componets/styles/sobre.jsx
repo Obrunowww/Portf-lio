@@ -16,7 +16,7 @@ h2, h3{
     color: ${props => props.theme.corDeDestaqueClaro};
     text-shadow: 1px 1px 1px black;
 }
-@media (max-width: 450px) {
+@media (max-width: 890px) {
     width: 95%;
     height: 95%;
     font-size: 20px;
@@ -131,7 +131,7 @@ div{
 }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 890px) {
     div{
         width: 60%;
         height: 40px;
@@ -151,7 +151,7 @@ justify-content: space-between;
 align-items: center;
 
 
-@media (max-width: 450px) {
+@media (max-width:890px) {
    flex-direction: column-reverse;
    height: 100%;
 }
@@ -175,7 +175,7 @@ filter: grayscale(100%);
     background-color: ${props => props.bg};
     text-shadow: 1px 1px black;
 }
-@media (max-width: 450px) {
+@media (max-width: 890px) {
    width: 35%;
    height: 35%;
    font-size: 30px;
@@ -188,7 +188,7 @@ height: 60%;
 gap: 2%;
 display: flex;
 flex-wrap: wrap;
-@media (max-width: 450px) {
+@media (max-width: 890px) {
    width: 90%;
    height: 40%;
    justify-content: center;
@@ -206,7 +206,7 @@ animation: ${aparecer} ease 2s;
 div{
     animation: ${aparecer} ease 2s;
 }
-@media (max-width: 450px) {
+@media (max-width: 890px) {
   width: 100%;
 }
 `
@@ -241,7 +241,7 @@ p{
     transform: translate(-50%, 0%);
     animation: ${aparecer} ease 3s;
 }
-@media (max-width: 450px) {
+@media (max-width: 890px) {
     .info{
         width: 100%;
     }
@@ -283,4 +283,9 @@ p{
     height: ${props => props.aberto === "true" ? "50%" : "10%"};
    
 }
+@media (min-width: 850px) and (max-width: 1000px) {
+    height: ${props => props.aberto === "true" ? "30%" : "7%"};
+}
+
+
 `
