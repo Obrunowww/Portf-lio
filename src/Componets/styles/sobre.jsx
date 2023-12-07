@@ -267,11 +267,12 @@ p{
 export const ListaPersonalizada = styled.li`
 overflow: hidden;
 flex: none;
-height: ${props => props.aberto === "true" ? "35%" : "10%"};
+height: ${props => props.aberto === "true" ? "40%" : "10%"};
 position: relative;
 transition: height ease 1.5s;
 display: flex;
 flex-direction: column;
+gap: 10%;
 
 h2{
     cursor: pointer;
@@ -294,7 +295,7 @@ p{
     padding: 0% 1%;
 }
 @media (max-width: 450px) {
-    height: ${props => props.aberto === "true" ? "50%" : "10%"};
+    height: ${props => props.aberto === "true" ? "70%" : "10%"};
    
 }
 @media (min-width: 850px) and (max-width: 1000px) {
