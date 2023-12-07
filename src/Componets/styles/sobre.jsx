@@ -231,7 +231,7 @@ export const InteressesContainer = styled.div`
 width: 100%;
 height: 100%;
 display: flex;
-
+padding: 1%;
 justify-content: center;
 overflow: auto;
 position: relative;
@@ -282,7 +282,7 @@ h2{
     &::before{
         content: "${props => props.aberto === "true" ? "▲" : "▼"}";
         position: absolute;
-        right: 0;
+        right: 1.5%;
         display: block;
         bottom: 0;
         transform: translateY(10%);
