@@ -19,6 +19,7 @@ function App() {
       <ThemeProvider theme={escuro? temas.escuro: temas.claro}>
         <Reset/>
         <BrowserRouter>
+        
           <Header escuro= {escuro} setEscuro = {setEscuro} ativo={ativo} setAtivo={setAtivo}/>
 
           <Routes>

@@ -34,7 +34,6 @@ align-items: center;
 justify-content: space-around;
 box-shadow: 1px 1px 10px rgba(1,1,1,0.5);
 background-color:${(props) => props.theme.headerColor} ;
-transform: translateY(0);
 animation: ${Descer} ease 1s;
 `
 export const Navegação = styled.nav`
