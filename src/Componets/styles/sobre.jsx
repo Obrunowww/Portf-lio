@@ -272,7 +272,7 @@ position: relative;
 transition: height ease 1.5s;
 display: flex;
 flex-direction: column;
-gap: 10%;
+
 
 h2{
     cursor: pointer;
@@ -292,6 +292,7 @@ h2{
     }
 }
 p{
+    margin-top: 4%;
     padding: 0% 1%;
 }
 @media (max-width: 450px) {

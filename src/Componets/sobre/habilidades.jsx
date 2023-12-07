@@ -35,7 +35,7 @@ function Abilidades() {
         nome: "React",
         logo: <FaReact />,
         corHover: { cor: "#61DBFB", bg: "#222222" },
-        info: "Tenho um conhecimento moderado em React. Foi quando o aprendi que me apaixonei pelo front-end, pois as possibilidades de reutilização de componentes me abriram um leque infinito de possibilidades. Estou buscando me aprofundar em algumas bibliotecas e frameworks, como o Swiper, Styled Components, React Icons, entre outros."
+        info: "Tenho um conhecimento moderado em React. Foi quando o aprendi que me apaixonei pelo front-end. Estou buscando me aprofundar em algumas bibliotecas e frameworks, como o Swiper, Styled Components, React Icons, entre outros."
     },
     {
         nome: "Styled Components",
